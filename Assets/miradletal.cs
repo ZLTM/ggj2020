@@ -5,6 +5,9 @@ using UnityEngine;
 public class miradletal : MonoBehaviour
 {
     Camera camera;
+    public ShaderEffect_BleedingColors sf_bleed;
+    public ShaderEffect_CorruptedVram sf_corrupt;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -20,7 +23,22 @@ public class miradletal : MonoBehaviour
         {
             var obj = hit.transform.gameObject;
             Debug.Log(obj);
+            mirando();
+        }
+        else
+        {
+            sin_mirar();
         }
     }
- 
+    public void mirando() {
+
+        sf_bleed.intensity = 4;
+        sf_bleed.shift = 4;
+        sf_corrupt.shift = 4;
     }
+    public void sin_mirar() {
+        sf_bleed.intensity = 0;
+        sf_bleed.shift = 0;
+        sf_corrupt.shift = 0;
+    }
+}
