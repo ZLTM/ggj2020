@@ -21,9 +21,12 @@ public class miradletal : MonoBehaviour
         var cameraCenter = camera.ScreenToWorldPoint(new Vector3(Screen.width / 2f, Screen.height / 2f, camera.nearClipPlane));
         if (Physics.Raycast(cameraCenter, this.transform.forward, out hit, 1000))
         {
-            var obj = hit.transform.gameObject;
-            Debug.Log(obj);
-            mirando();
+            if (hit.transform.CompareTag("espiritu"))
+            {
+                mirando();
+            }
+            
+          
         }
         else
         {
@@ -31,10 +34,14 @@ public class miradletal : MonoBehaviour
         }
     }
     public void mirando() {
-
-        sf_bleed.intensity = 4;
-        sf_bleed.shift = 4;
-        sf_corrupt.shift = 4;
+        if (sf_bleed.intensity<4)
+        {
+            sf_bleed.intensity = sf_bleed.intensity+Time.deltaTime*10;
+            sf_bleed.shift = sf_bleed.shift + Time.deltaTime * 10;
+            sf_corrupt.shift = sf_corrupt.shift+Time.deltaTime * 10;
+        }
+        
+        
     }
     public void sin_mirar() {
         sf_bleed.intensity = 0;

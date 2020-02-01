@@ -77,6 +77,8 @@ namespace UnityStandardAssets.Characters.FirstPerson
             public float stickToGroundHelperDistance = 0.5f; // stops the character
             public float slowDownRate = 20f; // rate at which the controller comes to a stop when there is no input
             public bool airControl; // can the user control the direction that is being moved in the air
+            [Tooltip("set it to 0.1 or more if you get stuck in wall")]
+            public float shellOffset; //reduce the radius by that ratio to avoid getting stuck in wall (a value of 0.1f is nice)
         }
 
 
@@ -93,7 +95,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
         private float m_YRotation;
         private Vector3 m_GroundContactNormal;
         private bool m_Jump, m_PreviouslyGrounded, m_Jumping, m_IsGrounded;
-
+       
 
         public Vector3 Velocity
         {
