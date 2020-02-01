@@ -496,13 +496,13 @@ MonoBehaviour:
       colorBlindnessType: 0
       colorBlindnessStrength: 1
   m_Resources: {fileID: 11400000, guid: d82512f9c8e5d4a4d938b575d47f88d4, type: 2}
-  m_ShowToolkit: 0
-  m_ShowCustomSorter: 0
+  m_ShowToolkit: 1
+  m_ShowCustomSorter: 1
   breakBeforeColorGrading: 0
   m_BeforeTransparentBundles: []
   m_BeforeStackBundles: []
   m_AfterStackBundles: []
---- !u!114 &789952916
+--- !u!114 &789952918
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -515,7 +515,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   shift: 0
---- !u!114 &789952917
+--- !u!114 &789952919
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -547,8 +547,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ae61438979ed64a408a2922593422682, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sf_bleed: {fileID: 0}
-  sf_corrupt: {fileID: 0}
+  sf_bleed: {fileID: 789952919}
+  sf_corrupt: {fileID: 789952918}
 --- !u!1 &1625723881
 GameObject:
   m_ObjectHideFlags: 0
