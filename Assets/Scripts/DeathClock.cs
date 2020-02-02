@@ -23,14 +23,14 @@ public class DeathClock : MonoBehaviour
 
         if (tutorialViewer.TutorialImage.GetComponent<Image>().enabled == true)
         {
-            timeLeft = MaxTime;
+            timeLeft -= Time.deltaTime;
+            //Debug.Log(timeLeft);
         }
 
 
         else
         {
-            timeLeft -= Time.deltaTime;
-            Debug.Log(timeLeft);
+            //Debug.Log("OWO time");
         }
     }
 }
