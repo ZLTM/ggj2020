@@ -13,7 +13,11 @@ public class TutorialViewer : MonoBehaviour
     public GameObject Enemy;
     public GameObject Timer;
     TMP_Text TimeLeft;
-
+    HandleDificulty handleDificulty;
+    void Awake()
+    {
+        handleDificulty = GameObject.FindGameObjectWithTag("HandleDificult").GetComponent<HandleDificulty>();
+    }
     void Start()
     {
         TimeLeft = Timer.GetComponent<TMP_Text>();
@@ -33,6 +37,10 @@ public class TutorialViewer : MonoBehaviour
             TutorialImage.GetComponent<Image>().enabled = false;
             Player.GetComponent<FirstPersonController>().enabled = true;
             Enemy.SetActive(true);
+        }
+        if (Player.GetComponent<FirstPersonController>().enabled && GameObject.FindWithTag("Enemy") == null)
+        {
+            handleDificulty.EnterStageOne();
         }
     }
 }

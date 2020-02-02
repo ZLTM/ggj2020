@@ -26,7 +26,7 @@ public class miradletal : MonoBehaviour
         var cameraCenter = camera.ScreenToWorldPoint(new Vector3(Screen.width / 2f, Screen.height / 2f, camera.nearClipPlane));
         if (Physics.Raycast(cameraCenter, this.transform.forward, out hit, 1000))
         {
-            if (hit.transform.CompareTag("espiritu"))
+            if (hit.transform.CompareTag("Enemy"))
             {
                 mirando();
             }

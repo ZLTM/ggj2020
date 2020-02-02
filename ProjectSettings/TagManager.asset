@@ -7,6 +7,9 @@ TagManager:
   - espiritu
   - parte
   - torso
+  - GameManager
+  - HandleDificult
+  - Enemy
   layers:
   - Default
   - TransparentFX

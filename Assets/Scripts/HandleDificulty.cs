@@ -9,14 +9,12 @@ public class HandleDificulty : MonoBehaviour
     public GameObject EnemySpawner;
     void Start()
     {
-        EnterStageOne();
 
     }
     public void StartGameMouster()
     {
         var instanceEnemy = Instantiate(Enemy, EnemySpawner.transform.position, Quaternion.identity);
-        DestroyEnemy(instanceEnemy);
-
+        //DestroyEnemy(instanceEnemy);
     }
     public void EnterStageOne()
     {
@@ -49,22 +47,11 @@ public class HandleDificulty : MonoBehaviour
     {
         Enemy.GetComponent<Enemy_AI>().moveSpeed = 0.6f;
     }
-    public void DestroyEnemy(GameObject HasEnemy)
+    public void DestroyEnemy()
     {
-        if (Enemy != null)
-        {
-            var coroutine = DestroyEnemy(HasEnemy, 3.0f);
-            StartCoroutine(coroutine);
-        }
+
     }
-    private IEnumerator DestroyEnemy(GameObject HasEnemy, float waitTime)
-    {
-        while (true)
-        {
-            yield return new WaitForSeconds(waitTime);
-            Destroy(HasEnemy);
-        }
-    }
+
     void Update()
     {
 

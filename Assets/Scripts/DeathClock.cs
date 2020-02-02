@@ -21,7 +21,7 @@ public class DeathClock : MonoBehaviour
     void Update()
     {
 
-        if (tutorialViewer.TutorialImage.GetComponent<Image>().enabled == true)
+        if (tutorialViewer.TutorialImage.GetComponent<Image>().enabled == true || timeLeft <= 0)
         {
             timeLeft = MaxTime;
         }
