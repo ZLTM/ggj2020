@@ -11,6 +11,7 @@ public class GameStatus : MonoBehaviour
     public bool WinState = false;
     public bool RestartState = false;
     public float FogLvl;
+    public GameObject Enemy;
     // Start is called before the first frame update
     void Start()
     {
@@ -50,6 +51,7 @@ public class GameStatus : MonoBehaviour
 
     public void Win()
     {
+        Enemy.SetActive(false);
         FogAdd += Time.deltaTime/35000;
         RenderSettings.fogDensity += FogAdd;
     }
