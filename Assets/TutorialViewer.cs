@@ -9,7 +9,6 @@ public class TutorialViewer : MonoBehaviour
     public Image TutorialImage;
     public GameObject Player;
     public GameObject Enemy;
-    // Start is called before the first frame update
     void Start()
     {
         TutorialImage.GetComponent<Image>().enabled = true;
@@ -17,7 +16,6 @@ public class TutorialViewer : MonoBehaviour
         Enemy.SetActive(false);
     }
 
-    // Update is called once per frame
     void Update()
     {
         if (Input.anyKeyDown)
