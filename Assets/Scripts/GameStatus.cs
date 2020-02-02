@@ -23,7 +23,7 @@ public class GameStatus : MonoBehaviour
     {
         FogLvl = RenderSettings.fogDensity;
         TimeRemaining = GameManager.timeLeft;
-        if(TimeRemaining<=0)
+        if (TimeRemaining <= 0)
         {
             RestartState = true;
         }
@@ -52,7 +52,7 @@ public class GameStatus : MonoBehaviour
     public void Win()
     {
         Enemy.SetActive(false);
-        FogAdd += Time.deltaTime/35000;
+        FogAdd += Time.deltaTime / 15000;
         RenderSettings.fogDensity += FogAdd;
     }
 }
