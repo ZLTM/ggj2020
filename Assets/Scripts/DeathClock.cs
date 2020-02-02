@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Clock : MonoBehaviour
+public class DeathClock : MonoBehaviour
 {
-    public float timeLeft = 3.0f;
+    public  float timeLeft = 3.0f;
 
     // Start is called before the first frame update
     void Start()
