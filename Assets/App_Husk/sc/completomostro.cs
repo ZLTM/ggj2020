@@ -25,7 +25,7 @@ public class completomostro : MonoBehaviour
         if (partes_c >= 6)
         {
             completo = true;
-            gameStatus.WinState = true;
+            gameStatus.Win();
             vida_itsalife();
             foreach (var item in obj)
             {

@@ -35698,6 +35698,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b55cccdbaadcded47a2ad1c72b05f27f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  MaxTime: 60
   timeLeft: 60
 --- !u!4 &1349047342
 Transform:
@@ -35743,7 +35744,6 @@ MonoBehaviour:
   Player: {fileID: 1403483287}
   Enemy: {fileID: 1643123562}
   Timer: {fileID: 843025532}
-  TimeLeft: {fileID: 0}
 --- !u!1 &1354519992
 GameObject:
   m_ObjectHideFlags: 0
@@ -53262,6 +53262,21 @@ PrefabInstance:
       propertyPath: m_LocalScale.y
       value: 0.69998
       objectReference: {fileID: 0}
+    - target: {fileID: 9214412929044018970, guid: ea2fdf115ca770a468e2f9f764c5cd6a,
+        type: 3}
+      propertyPath: m_Color.r
+      value: 0.084905684
+      objectReference: {fileID: 0}
+    - target: {fileID: 9214412929044018970, guid: ea2fdf115ca770a468e2f9f764c5cd6a,
+        type: 3}
+      propertyPath: m_Color.g
+      value: 0.084905684
+      objectReference: {fileID: 0}
+    - target: {fileID: 9214412929044018970, guid: ea2fdf115ca770a468e2f9f764c5cd6a,
+        type: 3}
+      propertyPath: m_Color.b
+      value: 0.084905684
+      objectReference: {fileID: 0}
     - target: {fileID: 9214412929044018971, guid: ea2fdf115ca770a468e2f9f764c5cd6a,
         type: 3}
       propertyPath: m_AnchorMax.x
@@ -53275,6 +53290,26 @@ PrefabInstance:
     - target: {fileID: 9214412929044018971, guid: ea2fdf115ca770a468e2f9f764c5cd6a,
         type: 3}
       propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9214412929044018971, guid: ea2fdf115ca770a468e2f9f764c5cd6a,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -23.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 9214412929044018971, guid: ea2fdf115ca770a468e2f9f764c5cd6a,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: -0.0000076294
+      objectReference: {fileID: 0}
+    - target: {fileID: 9214412929044018971, guid: ea2fdf115ca770a468e2f9f764c5cd6a,
+        type: 3}
+      propertyPath: m_SizeDelta.y
+      value: -46.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 9214412929044018971, guid: ea2fdf115ca770a468e2f9f764c5cd6a,
+        type: 3}
+      propertyPath: m_LocalPosition.z
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9214412929507083058, guid: ea2fdf115ca770a468e2f9f764c5cd6a,
@@ -53391,6 +53426,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_AdditionalShaderChannelsFlag
       value: 25
+      objectReference: {fileID: 0}
+    - target: {fileID: 9214412930384619548, guid: ea2fdf115ca770a468e2f9f764c5cd6a,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -0.00000086427
+      objectReference: {fileID: 0}
+    - target: {fileID: 9214412930384619548, guid: ea2fdf115ca770a468e2f9f764c5cd6a,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 9214412930384619548, guid: ea2fdf115ca770a468e2f9f764c5cd6a,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ea2fdf115ca770a468e2f9f764c5cd6a, type: 3}
