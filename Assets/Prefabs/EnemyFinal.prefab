@@ -624,11 +624,21 @@ PrefabInstance:
       propertyPath: m_Name
       value: ghosto
       objectReference: {fileID: 0}
+    - target: {fileID: 141400488709245910, guid: f3c6b096267c46448ac3fbf37ce7bb49,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 4d6775b297eadc74ab41f07a8c34a1a9, type: 2}
     - target: {fileID: 2489302850876048126, guid: f3c6b096267c46448ac3fbf37ce7bb49,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 9ecf2ca9e90544043ab2a59d6ef17535, type: 2}
+    - target: {fileID: 5840255483787996955, guid: f3c6b096267c46448ac3fbf37ce7bb49,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 4d6775b297eadc74ab41f07a8c34a1a9, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f3c6b096267c46448ac3fbf37ce7bb49, type: 3}
 --- !u!4 &5861019771328453504 stripped
