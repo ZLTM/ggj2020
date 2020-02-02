@@ -1,30 +1,35 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class DeathClock : MonoBehaviour
 {
-    public  float timeLeft = 3.0f;
+    public float MaxTime = 60.0f;
+    public float timeLeft;
+    TutorialViewer tutorialViewer;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        tutorialViewer = this.GetComponent<TutorialViewer>();
+
+        timeLeft = MaxTime;
     }
 
     // Update is called once per frame
     void Update()
     {
 
-        if (timeLeft > 0)
+        if (tutorialViewer.TutorialImage.GetComponent<Image>().enabled == true)
         {
-            timeLeft -= Time.deltaTime;
-            //Debug.Log(timeLeft);
+            timeLeft = MaxTime;
         }
+
 
         else
         {
-            //Debug.Log("OWO time");
+            timeLeft -= Time.deltaTime;
         }
     }
 }
