@@ -10,10 +10,12 @@ public class completomostro : MonoBehaviour
     public List<GameObject> obj = new List<GameObject>();
     // Start is called before the first frame update
     GameStatus gameStatus;
+    AudioSource sonido;
     void Start()
     {
         mio_rig = GetComponent<Rigidbody>();
         gameStatus = GameObject.FindGameObjectWithTag("GameManager").GetComponent<GameStatus>();
+        sonido = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -27,6 +29,7 @@ public class completomostro : MonoBehaviour
             completo = true;
             gameStatus.Win();
             vida_itsalife();
+
             foreach (var item in obj)
             {
                 //   item.GetComponent<BoxCollider>().enabled=true;
@@ -35,6 +38,7 @@ public class completomostro : MonoBehaviour
     }
     public void vida_itsalife()
     {
+        sonido.Play();
         GetComponent<BoxCollider>().enabled = true;
         mio_rig.isKinematic = false;
         mio_rig.useGravity = true;

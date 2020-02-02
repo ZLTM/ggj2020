@@ -27,8 +27,6 @@ public class DeathClock : MonoBehaviour
             var enemies = GameObject.FindWithTag("Enemy");
             Destroy(enemies);
         }
-
-
         else
         {
             timeLeft -= Time.deltaTime;

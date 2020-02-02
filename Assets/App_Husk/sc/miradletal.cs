@@ -17,6 +17,7 @@ public class miradletal : MonoBehaviour
         camera = GetComponentInChildren<Camera>();
         // volume = volumen.GetComponent<PostProcessVolume>();
         volumen.profile.TryGetSettings(out rojodelojo);
+        sin_mirar();
     }
 
     // Update is called once per frame
