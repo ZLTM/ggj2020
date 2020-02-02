@@ -6,36 +6,34 @@ using UnityEngine.SceneManagement;
 public class GameStatus : MonoBehaviour
 {
     public float TimeRemaining;
-    DeathClock GameManager;
+    DeathClock deatchClock;
+    completomostro fullMonster;
+    GameObject BuildedMonster;
     float FogAdd;
-    public bool WinState = false;
-    public bool RestartState = false;
-    public float FogLvl;
+    float FogLvl;
     public GameObject Enemy;
+
     // Start is called before the first frame update
     void Start()
     {
-        GameManager = this.GetComponent<DeathClock>();
+        deatchClock = this.GetComponent<DeathClock>();
+        BuildedMonster = GameObject.Find("body");
+        fullMonster = BuildedMonster.GetComponent<completomostro>();
     }
 
     // Update is called once per frame
     void Update()
     {
         FogLvl = RenderSettings.fogDensity;
-        TimeRemaining = GameManager.timeLeft;
+        TimeRemaining = deatchClock.timeLeft;
         if (TimeRemaining <= 0)
         {
-            RestartState = true;
+            Restart();
         }
 
-        if (WinState == true)
+        if (fullMonster.completo == true)
         {
             Win();
-        }
-
-        if (RestartState == true)
-        {
-            Restart();
         }
 
         if (FogLvl >= 0.7)
