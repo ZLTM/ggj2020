@@ -2,7 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemyJumpPosition : MonoBehaviour {
+public class EnemyJumpPosition : MonoBehaviour
+{
     public Transform objectToOrbit; //Object To Orbit
     Vector3 orbitAxis = Vector3.up; //Which vector to use for Orbit
     float orbitRadius = 35.0f; //Orbit Radius
@@ -16,30 +17,37 @@ public class EnemyJumpPosition : MonoBehaviour {
     private Vector3 relativePos;
     private Quaternion rotation;
     private Transform thisTransform;
-    void Start () {
+    void Start()
+    {
+        objectToOrbit = GameObject.FindGameObjectWithTag("Player").transform;
         thisTransform = transform;
     }
 
-    void Update () {
+    void Update()
+    {
 
-        if (orbitRadius <= 0f) {
+        if (orbitRadius <= 0f)
+        {
             orbitRadius = 0f;
-        } else {
+        }
+        else
+        {
             orbitRadius -= 0.01f;
         }
 
-        thisTransform.RotateAround (objectToOrbit.position, orbitAxis, orbitRoationSpeed * Time.deltaTime);
+        thisTransform.RotateAround(objectToOrbit.position, orbitAxis, orbitRoationSpeed * Time.deltaTime);
         orbitDesiredPosition = (thisTransform.position - objectToOrbit.position).normalized * orbitRadius + objectToOrbit.position;
-        thisTransform.position = Vector3.Slerp (thisTransform.position, orbitDesiredPosition, Time.deltaTime * orbitRadiusCorrectionSpeed);
+        thisTransform.position = Vector3.Slerp(thisTransform.position, orbitDesiredPosition, Time.deltaTime * orbitRadiusCorrectionSpeed);
 
         //Rotation
         relativePos = thisTransform.position - previousPosition;
-        rotation = Quaternion.LookRotation (relativePos);
-        thisTransform.rotation = Quaternion.Slerp (thisTransform.rotation, rotation, orbitAlignToDirectionSpeed * Time.deltaTime);
+        rotation = Quaternion.LookRotation(relativePos);
+        thisTransform.rotation = Quaternion.Slerp(thisTransform.rotation, rotation, orbitAlignToDirectionSpeed * Time.deltaTime);
         previousPosition = thisTransform.position;
 
-        if (thisTransform.position.y > 1.0f) {
-            thisTransform.position = new Vector3 (thisTransform.position.x, 1.0f, thisTransform.position.z);
+        if (thisTransform.position.y > 1.0f)
+        {
+            thisTransform.position = new Vector3(thisTransform.position.x, 1.0f, thisTransform.position.z);
         }
     }
 }
