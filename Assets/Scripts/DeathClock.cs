@@ -24,6 +24,8 @@ public class DeathClock : MonoBehaviour
         if (tutorialViewer.TutorialImage.GetComponent<Image>().enabled == true || timeLeft <= 0)
         {
             timeLeft = MaxTime;
+            var enemies = GameObject.FindWithTag("Enemy");
+            Destroy(enemies);
         }
 
 

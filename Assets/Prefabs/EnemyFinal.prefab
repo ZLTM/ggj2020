@@ -130,13 +130,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   target: {fileID: 0}
   jumpPosition: {fileID: 2285007981559099678}
-  moveSpeed: 1.6
-  rotationSpeed: 24
-  maxdistance: 60
+  moveSpeed: 0.9
+  rotationSpeed: 14
+  maxdistance: 80
   mindistance: 2
   myTransform: {fileID: 0}
   period: 0.1
-  intervalOfJumps: 5
+  intervalOfJumps: 4
 --- !u!195 &923450808254730287
 NavMeshAgent:
   m_ObjectHideFlags: 0
