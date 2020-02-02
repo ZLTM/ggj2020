@@ -5,6 +5,8 @@ TagManager:
   serializedVersion: 2
   tags:
   - espiritu
+  - parte
+  - torso
   layers:
   - Default
   - TransparentFX
