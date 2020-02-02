@@ -5,10 +5,11 @@ using UnityEngine.SceneManagement;
 
 public class GameStatus : MonoBehaviour
 {
-    float TimeRemaining;
+    public float TimeRemaining;
     DeathClock GameManager;
     float FogAdd;
     public bool WinState = false;
+    public bool RestartState = false;
     public float FogLvl;
     // Start is called before the first frame update
     void Start()
@@ -23,7 +24,7 @@ public class GameStatus : MonoBehaviour
         TimeRemaining = GameManager.timeLeft;
         if(TimeRemaining<=0)
         {
-            Restart();
+            RestartState = true;
         }
 
         if (WinState == true)
@@ -31,7 +32,12 @@ public class GameStatus : MonoBehaviour
             Win();
         }
 
-        if (FogLvl >= 1.0)
+        if (RestartState == true)
+        {
+            Restart();
+        }
+
+        if (FogLvl >= 0.7)
         {
             Restart();
         }
