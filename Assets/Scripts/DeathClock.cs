@@ -19,12 +19,12 @@ public class DeathClock : MonoBehaviour
         if (timeLeft > 0)
         {
             timeLeft -= Time.deltaTime;
-            Debug.Log(timeLeft);
+            //Debug.Log(timeLeft);
         }
 
         else
         {
-            Debug.Log("OWO time");
+            //Debug.Log("OWO time");
         }
     }
 }
