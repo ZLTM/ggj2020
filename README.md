@@ -9,7 +9,7 @@ global game jam 2020
 
 Horror game developed for the ggj2020 
 
-![](Star.PNG)
+<img border="0" align="center"  src="https://i.imgur.com/uTPmV7G.jpg"></a>
 
 ## Participation
 
