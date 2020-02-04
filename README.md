@@ -1,5 +1,4 @@
 # ggj2020
-global game jam 2020
 > 
 
 [![Type](https://img.shields.io/badge/Type-Videogame-945C1D.svg)](https://github.com/ZLTM/ggj2020)
