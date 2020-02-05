@@ -6,7 +6,7 @@
 [![State](https://img.shields.io/badge/State-Finished-2C834F.svg)](https://packagist.org/packages/phpunit/phpunit)
 [![License](https://img.shields.io/badge/License-Apache%202--0-343E7D.svg)](https://packagist.org/packages/phpunit/phpunit)
 
-Horror game developed for the ggj2020 
+Horror game developed for the ggj2020, Repair the body of the desease by finding the lost parts in the morgue and bring it back to life 
 
 <img border="0" align="center"  src="https://i.imgur.com/uTPmV7G.jpg"></a>
 
@@ -19,11 +19,13 @@ I participated as a:
 
 ## Installation
 
-Clone or download the project, you can play it using the unity editor or compiling it first.
+Clone or download the project, you can also download the build from
+<a href="https://globalgamejam.org/2020/games/incomplete-vessel-6">
+  the ggj2020 website</a>
 
 ## Gameplay
 
-Move with wasd, run with shift, rab objects by holding left click.
+Move with wasd, run with shift, grab objects by holding left click.
 
 ## Contact
 
