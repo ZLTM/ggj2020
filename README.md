@@ -1,4 +1,4 @@
-# ggj2020
+# Incomplete vessel
 > 
 
 [![Type](https://img.shields.io/badge/Type-Videogame-945C1D.svg)](https://github.com/ZLTM/ggj2020)
